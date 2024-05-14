@@ -34,17 +34,7 @@
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        // Check if the user has already visited the landing page
-        if (!localStorage.getItem('landingPageVisited')) {
-          // If not, redirect to the landing page
-          if (window.location.pathname === '/' || window.location.pathname === '/index') {
-            window.location.href = '/pages/landing';
-          }
-        }
-      });
-    </script>
+
     {{ content_for_header }}
 
     {%- liquid
