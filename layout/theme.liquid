@@ -297,6 +297,13 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+       <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.pathname === '/' || window.location.pathname === '/index') {
+          window.location.href = '/pages/landing';
+        }
+      });
+    </script>
       {{ content_for_layout }}
     </main>
 
