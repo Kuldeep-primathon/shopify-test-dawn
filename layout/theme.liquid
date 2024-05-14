@@ -301,12 +301,8 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
     
      {% if show_up_title %}}
-        <script>
-     window.location.href = '/pages/landing'
-          // show_up_title=false
-          
+{% section 'landing' %}
 
-  </script>
         {%- assign show_up_title = false -%}
        {% else %}}
       {{ content_for_layout }}
