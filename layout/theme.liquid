@@ -297,10 +297,14 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-       <script>
+    <script>
       document.addEventListener("DOMContentLoaded", function() {
-        if (window.location.pathname === '/' || window.location.pathname === '/index') {
-          window.location.href = '/pages/landing';
+        // Check if the user has already visited the landing page
+        if (!localStorage.getItem('landingPageVisited')) {
+          // If not, redirect to the landing page
+          if (window.location.pathname === '/' || window.location.pathname === '/index') {
+            window.location.href = '/pages/landing';
+          }
         }
       });
     </script>
