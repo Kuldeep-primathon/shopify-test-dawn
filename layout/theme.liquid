@@ -65,6 +65,7 @@
 
         {% liquid
           assign background_color = scheme.settings.background
+            assign show_up_title = true
           assign background_color_brightness = background_color | color_brightness
           if background_color_brightness <= 26
             assign background_color_contrast = background_color | color_lighten: 50
@@ -298,7 +299,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {%- assign show_up_title = true -%}
+    
      {% if show_up_title %}}
         <script>
      window.location.href = '/pages/landing'
