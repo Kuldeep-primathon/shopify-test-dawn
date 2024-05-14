@@ -299,7 +299,14 @@
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {%- assign show_up_title = true -%}
+     {% if show_up_title %}}
+        <script>
+     window.location.href = '/pages/landing'
+
+  </script>
+       {% else %}}
       {{ content_for_layout }}
+      {% endif %}}
     </main>
 
     {% sections 'footer-group' %}
