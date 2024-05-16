@@ -16,11 +16,14 @@
     height: 100%;
     object-fit: cover;
   }
+  .men-container {
+    border-left:1px solid black
+  }
 
   {% endstyle %}
 {{ page.title }}
 <div class="gender-section">
-<div><a href='/pages/home'>{% render 'mens-icon' %}</a></div>
+<div class='men-container'><a href='/pages/home'>{% render 'mens-icon' %}</a></div>
  
 <div><a href='/pages/home'>{% render 'female-icon' %}</a></div>
   </div>
