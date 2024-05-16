@@ -296,7 +296,7 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-{% unless sections=='landing' %}
+ {% unless template contains 'index' %}
   {% sections 'header-group' %}
 {% endunless %}
 
