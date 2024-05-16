@@ -307,8 +307,10 @@
       {{ content_for_layout }}
     
     </main>
-
-    {% sections 'footer-group' %}
+ {% unless template contains 'index' %}
+  {% sections 'footer-group' %}
+{% endunless %}
+   
 
 
     <ul hidden>
